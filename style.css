@@ -24,6 +24,23 @@
   font-weight: 700;
 }
 
+:root {
+  --clr-primary-Nutmeg: hsl(14, 45%, 36%);
+  --clr-primary-darkRaspberry: hsl(332, 51%, 32%);
+
+  --clr-neutral-White: hsl(0, 0%, 100%);
+  --clr-neutral-roseWhite: hsl(330, 100%, 98%);
+  --clr-neutral-Eggshell: hsl(30, 54%, 90%);
+  --clr-neutral-lightGrey: hsl(30, 18%, 87%);
+  --clr-neutral-wengeBrown: hsl(30, 10%, 34%);
+  --clr-neutral-darkCharcoal: hsl(24, 5%, 18%);
+
+  --fs-paragraph: 1rem;
+
+  --ff-strong: "Young Serif", serif;
+  --ff-primary: "Outfit", sans-serif;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -55,6 +72,12 @@ ol[role="list"] {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  font-size: var(--fs-paragraph);
+  font-family: var(--ff-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-neutral-Eggshell);
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -107,4 +130,19 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
+}
+
+/* Actual code starts here */
+main {
+  max-width: 736px;
+  background-color: var(--clr-neutral-White);
+
+  & .main_content {
+    padding: 0 1.875em;
+  }
+}
+
+h1 {
+  font-family: var(--ff-strong);
+  font-size: 1.75rem;
 }
